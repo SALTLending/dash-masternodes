@@ -6,8 +6,8 @@ If you are unable to withdraw because you have an active loan, contact support w
 and we will issue the ProRegTx for you.
 
 ## 1. Setup the Masternode Software
-follow the instructions at https://docs.dash.org/en/stable/masternodes/setup.html
-SKIP the sections `Send the collateral` and `Register your masternode` 
+Follow the instructions at https://docs.dash.org/en/stable/masternodes/setup.html
+SKIP the sections `Send the collateral` and `Register your masternode`.
 
 ## 2. Collect ProRegTx Parameters
 Find or generate, and write down the following parameters:
