@@ -38,13 +38,23 @@ Find or generate, and write down the following parameters:
   - This is the address you want your masternode payouts to go to. This can be the same as your `collateralAddress` if you want to help shore up your LTV.
 8. Fund Address (`fundAddress`)
   - This should have been generated in section 2.
+9. Legacy Masternode Private Key (`masternodePrivKey`)
+  - From *Tools > Debug console*, run `masternode genkey` to generate this.
 
 ## 4. Register your Masternode
 1. From *Tools > Debug console* run the following command with the parameters collected in section 3:
   - `protx register_fund <collateralAddress> <ipAndPort> <ownerKeyAddr> <operatorPubKey> <votingKeyAddr> <operatorReward> <payoutAddress> <fundAddress>`
   - This will also send your collateral to your SALT Collateral Wallet
-2. Run `masternode outputs` and write down the result.
+2. Run `masternode outputs` and write down the result. The value on the left side of the colon is the `txid`, and the right side is the `vout`.
 
 ## 5. Configure your Masternode
-1. Using the `secret` generated in *3.4*, add the following line to `~/.dashcore/dash.conf`:
-  - `masternodeblsprivkey=<secret>`
+1. Using the `secret` generated in *3.4*, and the `masternodePrivKey` generated in *3.9*, add the following lines to `~/.dashcore/dash.conf`:
+```
+masternode=1
+masternodeprivkey=<masternodePrivKey>
+masternodeblsprivkey=<secret>
+```
+2. Using the `ipAndPort` from *3.2*, the `masternodePrivKey` from *3.9* and the `txid` and `vout` from *4.2* add the following line to `~/.dashcore/masternode.conf`:
+```
+mn1 <ipAndPort> <masternodePrivKey> <txid> <vout>
+```
