@@ -58,3 +58,6 @@ masternodeblsprivkey=<secret>
 ```
 mn1 <ipAndPort> <masternodePrivKey> <txid> <vout>
 ```
+
+## 6. Check your masternode status
+Run `~/.dashcore/dash-cli masternode status`.
