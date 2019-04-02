@@ -44,8 +44,10 @@ Find or generate, and write down the following parameters:
 ## 4. Register your Masternode
 1. From *Tools > Debug console* run the following command with the parameters collected in section 3:
   - `protx register_fund <collateralAddress> <ipAndPort> <ownerKeyAddr> <operatorPubKey> <votingKeyAddr> <operatorReward> <payoutAddress> <fundAddress>`
+  - This will return a `txid`, copy this for later.
   - This will also send your collateral to your SALT Collateral Wallet
-2. Run `masternode outputs` and write down the result. The value on the left side of the colon is the `txid`, and the right side is the `vout`.
+2. With the txid from the previous step, run `getrawtransaction <txid> true`.
+  - This will return a large JSON blob. Look through it for the key `proRegTx`. Within that section look for `collateralIndex` and copy the value after it.
 
 ## 5. Configure your Masternode
 1. Using the `secret` generated in *3.4*, and the `masternodePrivKey` generated in *3.9*, add the following lines to `~/.dashcore/dash.conf`:
@@ -54,10 +56,10 @@ masternode=1
 masternodeprivkey=<masternodePrivKey>
 masternodeblsprivkey=<secret>
 ```
-2. Using the `ipAndPort` from *3.2*, the `masternodePrivKey` from *3.9* and the `txid` and `vout` from *4.2* add the following line to `~/.dashcore/masternode.conf`:
+2. Using the `ipAndPort` from *3.2*, the `masternodePrivKey` from *3.9*, the `txid` from *4.1*, and the `collateralIndex` from *4.2* add the following line to `~/.dashcore/masternode.conf`:
 ```
-mn1 <ipAndPort> <masternodePrivKey> <txid> <vout>
+mn1 <ipAndPort> <masternodePrivKey> <txid> <collateralIndex>
 ```
 
 ## 6. Check your masternode status
-Run `~/.dashcore/dash-cli masternode status`.
+Run `~/.dashcore/dash-cli masternode status`. Once your ProTx is confirmed on chain, the `state` should be `READY`.
