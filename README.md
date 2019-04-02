@@ -45,7 +45,7 @@ Find or generate, and write down the following parameters:
 1. From *Tools > Debug console* run the following command with the parameters collected in section 3:
   - `protx register_fund <collateralAddress> <ipAndPort> <ownerKeyAddr> <operatorPubKey> <votingKeyAddr> <operatorReward> <payoutAddress> <fundAddress>`
   - This will return a `txid`, copy this for later.
-  - This will also send your collateral to your SALT Collateral Wallet
+  - This will also send your collateral to your Dash Collateral Wallet on the SALT platform
 2. With the txid from the previous step, run `getrawtransaction <txid> true`.
   - This will return a large JSON blob. Look through it for the key `proRegTx`. Within that section look for `collateralIndex` and copy the value after it.
 
