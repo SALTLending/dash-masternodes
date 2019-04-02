@@ -19,7 +19,7 @@ This can be your masternode itself, or Dash-QT.
 
 ## 3. Collect ProRegTx Parameters
 Find or generate, and write down the following parameters:
-1. Your SALT Collateral Wallet address (`collateralAddress`)
+1. Your Dash collateral wallet address from the SALT platform (`collateralAddress`)
   - You can find this by logging into the portal, going to your Dash wallet, and clicking "Deposit"
 2. Your Masternode IP address and port (`ipAndPort`)
   - The IP is the public IP of the host running your masternode
