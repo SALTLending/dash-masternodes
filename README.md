@@ -60,6 +60,11 @@ masternodeblsprivkey=<secret>
 ```
 mn1 <ipAndPort> <masternodePrivKey> <txid> <collateralIndex>
 ```
+3. Restart your masternode:
+```
+~/.dashcore/dash-cli stop
+~/.dashcore/dashd
+```
 
 ## 6. Check your masternode status
 Run `~/.dashcore/dash-cli masternode status`. Once your ProTx is confirmed on chain, the `state` should be `READY`.
