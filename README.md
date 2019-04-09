@@ -44,6 +44,7 @@ Find or generate, and write down the following parameters:
 ## 4. Register your Masternode
 1. From *Tools > Debug console* run the following command with the parameters collected in section 3:
   - `protx register_fund <collateralAddress> <ipAndPort> <ownerKeyAddr> <operatorPubKey> <votingKeyAddr> <operatorReward> <payoutAddress> <fundAddress>`
+    - Note: if your wallet has a passphrase, it must be unlocked during this step.
   - This will return a `txid`, copy this for later.
   - This will also send your collateral to your Dash Collateral Wallet on the SALT platform
 2. With the txid from the previous step, run `getrawtransaction <txid> true`.
