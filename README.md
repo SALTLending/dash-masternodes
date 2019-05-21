@@ -31,6 +31,7 @@ Find or generate, and write down the following parameters:
   - You can find this by running `bls generate` in your Dash Core wallet (*Tools > Debug console*). Make sure to also save the corresponding `secret` for later.
 5. Voting Key Address (`votingKeyAddr`)
   - This must be an address generated from a *private key you know*. It does not necessarily need to be in your Dash Core wallet, but you will need it to vote on proposals later.
+  - This must be different than the `ownerKeyAddr`
 6. Operator Reward (`operatorReward`)
   - The percentage of the reward you want to go to the node operator.
   - Note: under this guide you are both the owner and the operator, so the recommendation is to set this value to `0.00`.
