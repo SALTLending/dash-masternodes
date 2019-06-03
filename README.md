@@ -39,8 +39,6 @@ Find or generate, and write down the following parameters:
   - This is the address you want your masternode payouts to go to. This can be the same as your `collateralAddress` if you want to help shore up your LTV.
 8. Fund Address (`fundAddress`)
   - This should have been generated in section 2.
-9. Legacy Masternode Private Key (`masternodePrivKey`)
-  - From *Tools > Debug console*, run `masternode genkey` to generate this.
 
 ## 4. Register your Masternode
 1. From *Tools > Debug console* run the following command with the parameters collected in section 3:
@@ -55,7 +53,6 @@ Find or generate, and write down the following parameters:
 1. Using the `secret` generated in *3.4*, and the `masternodePrivKey` generated in *3.9*, add the following lines to `~/.dashcore/dash.conf`:
 ```
 masternode=1
-masternodeprivkey=<masternodePrivKey>
 masternodeblsprivkey=<secret>
 ```
 2. Using the `ipAndPort` from *3.2*, the `masternodePrivKey` from *3.9*, the `txid` from *4.1*, and the `collateralIndex` from *4.2* add the following line to `~/.dashcore/masternode.conf`:
