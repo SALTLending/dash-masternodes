@@ -55,11 +55,7 @@ Find or generate, and write down the following parameters:
 masternode=1
 masternodeblsprivkey=<secret>
 ```
-2. Using the `ipAndPort` from *3.2*, the `masternodePrivKey` from *3.9*, the `txid` from *4.1*, and the `collateralIndex` from *4.2* add the following line to `~/.dashcore/masternode.conf`:
-```
-mn1 <ipAndPort> <masternodePrivKey> <txid> <collateralIndex>
-```
-3. Restart your masternode:
+2. Restart your masternode:
 ```
 ~/.dashcore/dash-cli stop
 ~/.dashcore/dashd
