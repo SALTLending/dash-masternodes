@@ -50,7 +50,7 @@ Find or generate, and write down the following parameters:
   - This will return a large JSON blob. Look through it for the key `proRegTx`. Within that section look for `collateralIndex` and copy the value after it.
 
 ## 5. Configure your Masternode
-1. Using the `secret` generated in *3.4*, and the `masternodePrivKey` generated in *3.9*, add the following lines to `~/.dashcore/dash.conf`:
+1. Using the `secret` generated in *3.4* add the following lines to `~/.dashcore/dash.conf`:
 ```
 masternode=1
 masternodeblsprivkey=<secret>
