@@ -14,7 +14,7 @@ This can be your masternode itself, or Dash-QT.
 1. Go to *Tools > Debug console*
 2. Run `getnewaddress`
 3. *Backup your wallet* in case anything goes wrong in later steps.
-3. Send at least 1000 Dash to this address.
+3. Send at least 1000 Dash to this address, include a small amount extra for fees.
 4. Save this address for later. It is your `fundAddress`.
 
 ## 3. Collect ProRegTx Parameters
