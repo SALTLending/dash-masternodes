@@ -1,6 +1,6 @@
 # Provider Update Registrar Transaction
 
-A Provider Update Registrar Transaction (ProUpRegTx) is used to update information relating to the owner. An owner can update the operator's BLS public key (e.g. to nominate a new operator), the voting address and their own payout address.  Dash Core allows us to run the following command if we ant to update this information:
+A Provider Update Registrar Transaction (ProUpRegTx) is used to update information relating to the owner. An owner can update the operator's BLS public key (e.g. to nominate a new operator), the voting address and their own payout address.  Dash Core allows us to run the following command if we want to update this information:
 
 ```
 protx update_registrar <proTxHash> <operatorKeyAddr> <votingKeyAddr> <payoutAddress> <feeSourceAddress>
